@@ -1,13 +1,8 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import routes from './routes.config.js'
-
-Vue.use(VueRouter);
-
-const router = new VueRouter({
-    routes,
-});
+import resume from './pages/index/index.vue'
 
 const app = new Vue({
-    router
+    components : {
+        resume
+    }
 }).$mount('#app');

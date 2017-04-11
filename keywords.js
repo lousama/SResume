@@ -1,4 +1,6 @@
 export default [
+    'Canvas',
+    'Audio',
     'CSS',
     'JavaScript',
     'Vue',
@@ -7,6 +9,7 @@ export default [
     'HTML',
     'Node.js',
     'ECMAScript',
+    'ECMAScript2015',
     'Photoshop',
     'Git',
     'Webpack',
@@ -15,5 +18,5 @@ export default [
     'Markdown',
     'bash',
     'HTML5',
-    'ES6'
+    'ES6',
 ]

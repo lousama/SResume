@@ -1,0 +1,111 @@
+.main_font_color {
+    color: #222;
+}
+.minor_font_color {
+    color: #555;
+}
+h1, h2, h3, h4, h5, h6, p, li, ul {
+    .main_font_color;
+    margin: 0;
+    font-weight: 100;
+}
+section {
+    margin-top: 2em;
+}
+.resume {
+    font-size: 16px;
+    padding: 2em 3em;
+    overflow: hidden;
+}
+.section_title {
+    margin-bottom: 1em;
+    .zh_title {
+        font-size: 1.3em;
+    }
+    .en_title {
+        font-size: 1em;
+    }
+}
+.item {
+    overflow: hidden;
+    .item_duration {
+        float: left;
+        width: 20%;
+    }
+    .item_content {
+        float: right;
+        width: 80%;
+
+        li {
+            margin-bottom: .3em;
+        }
+    }
+}
+.annotation {
+    font-size: .8em;
+    .minor_font_color;
+    margin-left: .2em;
+}
+header {
+    overflow: hidden;
+    .main_info {
+        float: left;
+        .name {
+            font-size: 4em;
+
+            &:first-letter {
+            }
+        }
+        .intension {
+            font-size: 1.5em;
+            .minor_font_color;
+            margin-top: .5em;
+        }
+    }
+    .other_basic_info {
+        margin-top: .7em;
+        float: right;
+        li {
+            list-style: none;
+            font-style: italic;
+            .minor_font_color;
+            a {
+                .minor_font_color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.left_section {
+    width: 60%;
+    float: left;
+}
+
+.right_section {
+    width: 40%;
+    float: right;
+}
+
+.education {
+    .school {
+        font-size: 1.1em;
+        margin-bottom: .2em;
+    }
+    .major {
+        font-size: 1.1em;
+        margin-bottom: .2em;
+    }
+    .ranking {
+        font-size: 1.1em;
+    }
+}
+
+.language {
+    .cet {
+        margin-bottom: .4em;
+    }
+    ul {
+        padding-left: 1em;
+    }
+}
