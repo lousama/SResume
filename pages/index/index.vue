@@ -61,23 +61,16 @@
                 <h2 class="en_title">Skills</h2>
             </div>
 
-            <ul v-for="item in resume.skills" class="item">
-
-                <li class="item_content">
+            <div v-for="item in resume.skills" class="item">
+                <div class="item_content">
                     <h1>{{ item.title }}</h1>
                     <ul>
-                        <li v-for="skill in item.item">
-                            <h1>{{ skill.title }}</h1>
-                            <ul>
-                                <li v-for="detail in skill.details">
-                                {{ detail }}
-                                </li>
-                            </ul>
+                        <li v-for="detail in item.details">
+                        {{ detail }}
                         </li>
                     </ul>
-                </li>
-                
-            </ul>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -105,6 +98,23 @@
                         <a :href="item.source">source</a>
                         <a :href="item.demo">demo</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="selfe">
+            <div class="section_title">
+                <h1 class="zh_title">自我评价</h1>
+                <h2 class="en_title">Self-evaluation</h2>
+            </div>
+
+            <div class="item">
+                <div class="item_content">
+                    <ul>
+                        <li v-for="item in resume.selfe">
+                        {{ item }}
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
