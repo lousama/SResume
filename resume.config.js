@@ -103,9 +103,9 @@ export default {
         {
             title : '其他',
             details : [
-                '日常使用ArchLinux，熟练使用Vim，熟悉常用命令和配置，能编写简单的bash脚本',
+                '日常使用ArchLinux，熟练使用Vim，熟悉常用命令和配置，能编写简单的Bash脚本',
                 '具备一定的审美能力，能使用Photoshop完成简单设计',
-                '熟悉Git/svn常用命令，有协作开发经验',
+                '熟悉Git/SVN常用命令，有协作开发经验',
                 '科学上网',
             ],
         }
