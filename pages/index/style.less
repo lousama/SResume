@@ -4,10 +4,24 @@
 .minor_font_color {
     color: #555;
 }
+.item_title_text_size {
+    font-size: 1.1em;
+}
+.list_text_size {
+    font-size: 1em;
+}
+
+
 h1, h2, h3, h4, h5, h6, p, li, ul {
     .main_font_color;
     margin: 0;
     font-weight: 100;
+}
+h1, h2, h3, h4, h5, h6, p, li {
+    margin-bottom: .3em;
+}
+a {
+    .minor_font_color;
 }
 section {
     margin-top: 2em;
@@ -20,6 +34,7 @@ section {
 .section_title {
     margin-bottom: 1em;
     .zh_title {
+        margin: 0;
         font-size: 1.3em;
     }
     .en_title {
@@ -36,8 +51,27 @@ section {
         float: right;
         width: 80%;
 
+        h1 {
+            .item_title_text_size;
+        }
+
+        h2 {
+            .list_text_size;
+        }
+
+        ul {
+            padding-left: 1.3em;
+        }
+
         li {
-            margin-bottom: .3em;
+            .list_text_size;
+        }
+
+        .display {
+            padding-top: .1em;
+            a {
+                margin-right: .3em;
+            }
         }
     }
 }
@@ -52,6 +86,7 @@ header {
         float: left;
         .name {
             font-size: 4em;
+            margin-bottom: .15em;
 
             &:first-letter {
             }
@@ -59,7 +94,7 @@ header {
         .intension {
             font-size: 1.5em;
             .minor_font_color;
-            margin-top: .5em;
+            margin-top: .2em;
         }
     }
     .other_basic_info {
@@ -70,7 +105,6 @@ header {
             font-style: italic;
             .minor_font_color;
             a {
-                .minor_font_color;
                 text-decoration: none;
             }
         }
@@ -78,26 +112,24 @@ header {
 }
 
 .left_section {
-    width: 60%;
+    width: 50%;
     float: left;
 }
 
 .right_section {
-    width: 40%;
+    width: 50%;
     float: right;
 }
 
 .education {
+    .school, .major, .ranking {
+        .item_title_text_size;
+    }
     .school {
-        font-size: 1.1em;
         margin-bottom: .2em;
     }
     .major {
-        font-size: 1.1em;
         margin-bottom: .2em;
-    }
-    .ranking {
-        font-size: 1.1em;
     }
 }
 
@@ -107,5 +139,21 @@ header {
     }
     ul {
         padding-left: 1em;
+    }
+}
+
+.experience {
+    ul {
+        padding-top: .3em;
+    }
+}
+
+.skills {
+    .item {
+        padding: 0;
+    }
+    .item_content {
+        width: 100%;
+        list-style: none;
     }
 }

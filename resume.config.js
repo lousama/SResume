@@ -90,14 +90,6 @@ export default {
                     title : '',
                     details : [],
                 },
-                {
-                    title : '',
-                    details : [],
-                },
-                {
-                    title : '',
-                    details : [],
-                },
             ]
         },
         {
@@ -106,13 +98,11 @@ export default {
                 {
                     title : '',
                     details : [
-                        '日常使用ArchLinux，熟悉常用命令和配置，能编写简单的bash脚本',
-                        '熟练使用Vim',
+                        '日常使用ArchLinux，熟练使用Vim，熟悉常用命令和配置，能编写简单的bash脚本',
                         '具备一定的审美能力，能使用Photoshop完成简单设计',
                         '熟悉Git/svn常用命令，有协作开发经验',
                         '能够使用Markdown编写得体的文档',
                         '科学上网',
-                        '会打羽毛球（。',
                     ],
                 }
             ]

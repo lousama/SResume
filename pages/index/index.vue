@@ -55,22 +55,59 @@
             </div>
         </section>
 
+        <section class="skills">
+            <div class="section_title">
+                <h1 class="zh_title">技能</h1>
+                <h2 class="en_title">Skills</h2>
+            </div>
+
+            <ul v-for="item in resume.skills" class="item">
+
+                <li class="item_content">
+                    <h1>{{ item.title }}</h1>
+                    <ul>
+                        <li v-for="skill in item.item">
+                            <h1>{{ skill.title }}</h1>
+                            <ul>
+                                <li v-for="detail in skill.details">
+                                {{ detail }}
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </section>
+    </div>
+
+    <div class="right_section">
         <section class="experience">
             <div class="section_title">
-                <h1 class="zh_title">项目经验</h1>
+                <h1 class="zh_title">实习/项目经验</h1>
                 <h2 class="en_title">Experience</h2>
             </div>
 
             <div v-for="item in resume.experience" class="item">
                 <div class="item_duration">{{ item.duration }}</div>
                 <div class="item_content">
-                    <h1>{{ item.title }}</h1>
+                    <h1>
+                        {{ item.title }} | 
+                        <span class="annotation">{{ item.role }}</span>
+                    </h1>
+                    <h2>{{ item.description }}</h2>
+                    <ul>
+                        <li v-for="detail in item.details">
+                            {{ detail }}
+                        </li>
+                    </ul>
+                    <div class="display">
+                        <a :href="item.source">source</a>
+                        <a :href="item.demo">demo</a>
+                    </div>
                 </div>
             </div>
         </section>
-    </div>
-
-    <div class="right_section">
     </div>
 
 
