@@ -3,6 +3,6 @@ import resume from './pages/index/index.vue'
 
 const app = new Vue({
     components : {
-        resume
+        resume,
     }
 }).$mount('#app');

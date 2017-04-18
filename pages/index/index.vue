@@ -41,14 +41,14 @@
             <div class="item">
                 <div class="item_duration">
                     <div class="cet">
-                        CET6 {{ resume.language.cet6 }}
+                        CET4 {{ resume.language.cet4 }}
                     </div>
                 </div>
 
                 <div class="item_content">
                     <ul>
-                        <li v-for="item in resume.language.details">
-                            {{ item }}
+                        <li v-for="item in resume.language.details"
+                        v-html="addSpace(item)">
                         </li>
                     </ul>
                 </div>
@@ -65,8 +65,8 @@
                 <div class="item_content">
                     <h1>{{ item.title }}</h1>
                     <ul>
-                        <li v-for="detail in item.details">
-                        {{ detail }}
+                        <li v-for="detail in item.details"
+                        v-html="textModify(detail)">
                         </li>
                     </ul>
                 </div>
@@ -90,8 +90,8 @@
                     </h1>
                     <h2>{{ item.description }}</h2>
                     <ul>
-                        <li v-for="detail in item.details">
-                            {{ detail }}
+                        <li v-for="detail in item.details"
+                        v-html="textModify(detail)">
                         </li>
                     </ul>
                     <div class="display">
@@ -129,13 +129,36 @@
 </style>
 
 <script>
-import resume from '../../resume.config.js'
+import resume from '../../config/resume.config.js'
+import keywords from '../../config/keywords.js'
+import config from '../../config/app.config.js'
 
 export default {
     data () {
         return {
-            resume : resume
+            resume : resume,
         };
-    }
+    },
+
+    methods : {
+        textModify ( text ) {
+            text = this.addSpace( text );
+            
+            if ( config.highlight ) {
+                text = this.highlight( text );
+            }
+            return text;
+        },
+        addSpace ( text ) {
+            text = text.replace( /\w+/g, " $& " )
+            return text;
+        },
+        highlight ( text ) {
+            keywords.forEach( function( word ) {
+                text = text.replace( word, '<b>' + word + '</b>' );
+            } );
+            return text;
+        },
+    },
 }
 </script>

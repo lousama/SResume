@@ -1,6 +1,6 @@
 export default {
     name : '孙梦茹',
-    intension : '前端工程师',
+    intension : 'Web前端工程师',
 
     basicInfo : {
         email : 'sevenskey@163.com',
@@ -37,38 +37,22 @@ export default {
             source : 'http://github.com/sevenskey/chuangkit_new_index',
             demo : 'http://sevenskey.xyz/chuangkit_new_index',
             details : [
-                '使用Vue+Webpack构建',
                 '实现了较为复杂的动画效果',
                 '解决了动画性能问题',
                 '实现了一个简单的动画控制库'
             ],
         },
         {
-            title : '',
-            duration: '2017.02-2017.03',
+            title : 'SResume',
+            duration: '2017.04',
             role : '个人项目',
-            description : '完成架构设计和编写',
-            source : 'http://github.com/sevenskey/chuangkit_new_index',
-            demo : 'http://sevenskey.xyz/chuangkit_new_index',
+            description : '网页简历生成器',
+            source : 'http://github.com/sevenskey/SResume',
+            demo : 'http://sevenskey.xyz/resume',
             details : [
-                '使用Vue+Webpack构建',
-                '实现了较为复杂的动画效果',
-                '解决了动画性能问题',
-                '实现了一个简单的动画控制库'
-            ],
-        },
-        {
-            title : '',
-            duration: '2017.02-2017.03',
-            role : '个人项目',
-            description : '完成架构设计和编写',
-            source : 'http://github.com/sevenskey/chuangkit_new_index',
-            demo : 'http://sevenskey.xyz/chuangkit_new_index',
-            details : [
-                '使用Vue+Webpack构建',
-                '实现了较为复杂的动画效果',
-                '解决了动画性能问题',
-                '实现了一个简单的动画控制库'
+                'Vue+Webpack练习作',
+                '由JSON生成简历',
+                ''
             ],
         },
     ],
@@ -87,17 +71,18 @@ export default {
             title : 'Web前端',
             details : [
                 '能够编写模块化的、可维护性良好的代码',
-                '熟悉HTML5&CSS3，包括但不限于Canvas、Audio、Web Audio API，编写过多个实验性小项目',
+                '熟悉HTML5&CSS3，包括但不限于Canvas、Audio、WebAudioAPI，编写过多个实验性小项目',
                 '熟悉ECMAScript2015',
                 '熟练使用Vue，并了解其基本原理',
-                '能够使用Jade、Less、Webpack等前端构建工具开发完整的Web应用',
+                '了解前端自动化，能够使用Webpack构建简单的前端脚手架',
                 '熟练使用jQuery',
             ],
         },
         {
             title : 'Web后端',
             details : [
-                '占空qwq'
+                '了解基本的后端知识，使用PHP实现过一个简单的博客程序',
+                '能够使用Node、Python编写简单的爬虫',
             ],
         },
         {

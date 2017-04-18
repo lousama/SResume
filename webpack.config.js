@@ -26,7 +26,7 @@ module.exports = {
             },
             {
                 test : /\.less$/,
-                loader : 'less-loader'
+                loader : 'style-loader?insertAt=top!css-loader!less-loader'
             },
             {
                 test : /\.js$/,
