@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const PROD = JSON.parse(process.env.PROD_ENV || 0);
+const PATH = process.cwd();
+const PROJECTNAME = process.platform.indexOf('win') != -1 ? PATH.split('\\').pop() : PATH.split('/').pop();
 
 module.exports = {
     entry : './main.js',
@@ -8,7 +10,7 @@ module.exports = {
     output : {
         path : path.resolve( __dirname, "dist" ),
         filename : 'bundle.js',
-        publicPath : '/dist/',
+        publicPath : PROD ? '/' + PROJECTNAME + '/dist/' : '/dist/',
     },
 
     module : {
@@ -20,7 +22,7 @@ module.exports = {
                     loaders : {
                         css : 'style-loader?insertAt=top!css-loader',
                         less : 'style-loader?insertAt=top!css-loader!less-loader',
-                        js : 'babel-loader',
+                        js : 'babel-loader'
                     }
                 }
             },
@@ -46,13 +48,13 @@ module.exports = {
 
     resolve : {
         alias : {
-            'vue' : 'vue/dist/vue.common.js'
+            'vue' : PROD ? 'vue/dist/vue.min.js' : 'vue/dist/vue.common.js'
         }
     },
 
-    //plugins : PROD ? [
-        //new webpack.optimize.UglifyJsPlugin({
-            //minimize : true,
-        //}),
-    //] : [],
+    plugins : PROD ? [
+        new webpack.optimize.UglifyJsPlugin({
+            minimize : true,
+        }),
+    ] : [],
 }

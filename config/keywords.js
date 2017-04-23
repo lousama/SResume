@@ -1,12 +1,10 @@
 export default [
     'Canvas',
     'Audio',
-    'CSS',
     'JavaScript',
     'Vue',
     'Linux',
     'Vim',
-    'HTML',
     'Node.js',
     'ECMAScript',
     'ECMAScript2015',

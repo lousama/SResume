@@ -1,0 +1,76 @@
+.main_font_color {
+    color: #222;
+}
+.minor_font_color {
+    color: #555;
+}
+.item_title_text_size {
+    font-size: 1.1em;
+}
+.list_text_size {
+    font-size: 1em;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, li, ul {
+    .main_font_color;
+    margin: 0;
+    font-weight: 100;
+}
+h1, h2, h3, h4, h5, h6, p, li {
+    margin-bottom: .25em;
+}
+a {
+    .minor_font_color;
+    cursor: pointer;
+}
+section {
+    margin-top: 1em;
+}
+.resume {
+    font-size: 16px;
+    padding: .8em 3em;
+    overflow: hidden;
+}
+.keyword {
+    font-weight: 900 !important;
+}
+.section_title {
+    margin-bottom: .8em;
+    .zh_title {
+        margin: 0;
+        font-size: 1.3em;
+    }
+    .en_title {
+        font-size: 1em;
+    }
+}
+.annotation {
+    font-size: .8em;
+    .minor_font_color;
+    margin-left: .2em;
+}
+.item {
+    h1 {
+        .item_title_text_size;
+    }
+
+    h2 {
+        .list_text_size;
+    }
+
+    ul {
+        padding-left: 1.3em;
+    }
+
+    li {
+        .list_text_size;
+    }
+
+    .display {
+        padding-top: .1em;
+        a {
+            margin-right: .3em;
+        }
+    }
+}
