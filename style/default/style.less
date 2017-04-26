@@ -58,6 +58,27 @@ header {
     }
 }
 
+.section_title {
+    .zh_title {
+        position: relative;
+        padding-left: 12px;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 18px;
+            background-color: #333;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+    }
+    .en_title {
+        display: none;
+    }
+}
+
 .first_section {
     width: 55%;
     float: left;
@@ -81,6 +102,12 @@ header {
     }
     .major {
         margin-bottom: .2em;
+    }
+    .ranking {
+        font-size: 1em;
+        &:before {
+            content: "排名：";
+        }
     }
 }
 
@@ -114,4 +141,55 @@ header {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 780px) {
+    .first_section {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    .second_section {
+        padding: 0;
+        width: 100%;
+        float: none;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    header {
+        .main_info {
+            position: absolute;
+            .name {
+                font-size: 3.2em;
+            }
+            .intension {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    header {
+        .main_info {
+            position: static;
+            padding-right: 2em;
+            .name {
+                font-size: 3.2em;
+            }
+            .intension {
+                font-size: 1.2em;
+            }
+        }
+        .other_basic_info {
+            padding: 0;
+            float: left;
+        }
+    }
+}
+}
+@media screen and (max-width: 440px) {
+    .resume {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }

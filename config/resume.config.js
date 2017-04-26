@@ -1,13 +1,13 @@
 export default {
-    name : '孙喵喵',
+    name : '孙梦茹',
     intension : 'Web前端工程师',
 
     basicInfo : {
         email : 'sevenskey@163.com',
-        phone : '27182818284',
+        phone : '17862905018',
         links : {
-            Github : 'http://github.com/sevenskey',
-            'Photoshop Works' : 'http://photo.163.com/sevenskey/',
+            GitHub : 'http://github.com/sevenskey',
+            'Photoshop作品' : 'http://photo.163.com/sevenskey/',
         },
     },
 
@@ -16,7 +16,7 @@ export default {
         duration : '2014-2018',
         major : '电子信息科学与技术',
         degree : '本科',
-        ranking : '40%',
+        ranking : '', // 留空或 false 不显示排名
         awards : [
         ],
     },

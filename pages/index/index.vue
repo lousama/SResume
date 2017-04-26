@@ -3,13 +3,13 @@
     <header>
         <div class="main_info">
             <h1 class="name">{{ resume.name }}</h1>
-            <h2 class="intension">{{ resume.intension }}</h2>
+            <h2 class="intension">{{ resume.intension | spaceFilter  }}</h2>
         </div>
         <ul class="other_basic_info">
             <li>{{ resume.basicInfo.phone }}</li>
             <li>{{ resume.basicInfo.email }}</li>
             <li class="header_link" v-for="( url, key ) in resume.basicInfo.links">
-                <a :href="url"> {{ key }}</a>
+                <a :href="url"> {{ key | spaceFilter }}</a>
             </li>
         </ul>
     </header>
@@ -29,7 +29,9 @@
                         <span class="annotation">{{ resume.education.degree }}</span>
                     </h1>
                     <h2 class="major">{{ resume.education.major }}</h2>
-                    <h3 class="ranking">{{ resume.education.ranking }}</h3>
+                    <h3 class="ranking"
+                    v-if="resume.education.ranking"
+                    >{{ resume.education.ranking }}</h3>
 
                     <ul>
                         <li v-for="item in resume.education.awards">{{ item }}</li>
@@ -46,7 +48,7 @@
 
             <div v-for="item in resume.skills" class="item">
                 <div class="item_content">
-                    <h1>{{ item.title }}</h1>
+                    <h1>{{ item.title | spaceFilter }}</h1>
                     <ul>
                         <li v-for="detail in item.details"
                         v-html="textModify(detail)">
@@ -68,8 +70,8 @@
                 <div class="item_duration">{{ item.duration }}</div>
                 <div class="item_content">
                     <h1>
-                        {{ item.title }} | 
-                        <span class="annotation">{{ item.role }}</span>
+                        {{ item.title | spaceFilter }} | 
+                        <span class="annotation">{{ item.role | spaceFilter }}</span>
                     </h1>
                     <h2 v-html="item.description"></h2>
                     <ul>
@@ -78,8 +80,8 @@
                         </li>
                     </ul>
                     <div class="display">
-                        <a  :href="item.source">source</a>
-                        <a :href="item.demo">demo</a>
+                        <a  :href="item.source">源代码</a>
+                        <a :href="item.demo">演示</a>
                     </div>
                 </div>
             </div>
@@ -105,8 +107,8 @@
 
                 <div class="item_content">
                     <ul>
-                        <li v-for="item in resume.language.details"
-                        v-html="addSpace(item)">
+                        <li v-for="item in resume.language.details">
+                        {{ item | spaceFilter }}
                         </li>
                     </ul>
                 </div>
@@ -123,7 +125,7 @@
                 <div class="item_content">
                     <ul>
                         <li v-for="item in resume.selfe.content">
-                        {{ item }}
+                        {{ item | spaceFilter }}
                         </li>
                     </ul>
                 </div>
@@ -166,8 +168,7 @@ export default {
             return text;
         },
         addSpace ( text ) {
-            text = text.replace( /\w+/g, " $& " )
-            return text;
+            return text.replace( /\w+/g, " $& " )
         },
         highlight ( text ) {
             // 复杂度偏高
@@ -184,7 +185,10 @@ export default {
         },
         styleFilter ( e ) {
             return e ? e : 'default';
-        }
+        },
+        spaceFilter ( e ) {
+            return e.replace( /\w+/g, " $& " )
+        },
     },
 }
 </script>
